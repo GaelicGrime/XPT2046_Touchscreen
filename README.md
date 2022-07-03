@@ -1,6 +1,6 @@
 # XPT2046 Touchscreen Arduino Library
 
-XPT2046_Touchscreen is a library for the XPT2046 resistive touchscreen controllers used on many low cost TFT displays.
+XPT2046_TouchscreenMods is a library for the XPT2046 resistive touchscreen controllers used on many low cost TFT displays.
 
 ![ILI9431Test Example Program](doc/ILI9431Test.jpg)
 
@@ -11,7 +11,7 @@ used for chip select is required.  The normal MISO, MOSI and SCK pins will be
 used automatically.
 
     #define CS_PIN  8
-    XPT2046_Touchscreen ts(CS_PIN);
+    XPT2046_TouchscreenMods ts(CS_PIN);
 
 The use of the Touch interrupt pin can be optionally specified. If the Teensy
 pin specified is actively connected to the T_IRQ display pin then the normal
@@ -19,7 +19,7 @@ touch calls will respond, but can be called more often as each call returns
 without hardware access when no interrupt was recorded.
 
     #define TIRQ_PIN  2
-    XPT2046_Touchscreen ts(CS_PIN, TIRQ_PIN);
+    XPT2046_TouchscreenMods ts(CS_PIN, TIRQ_PIN);
 
 In setup(), use the begin() function to initialize the touchscreen, and
 optionally use setRotation(n), where n is 0 to 3, matching the rotation
@@ -55,7 +55,7 @@ The Z coordinate represents the amount of pressure applied to the screen.
 
 ## Adafruit Library Compatibility
 
-XPT2046_Touchscreen is meant to be a compatible with sketches written for Adafruit_STMPE610, offering the same functions, parameters and numerical ranges as Adafruit's library.
+XPT2046_TouchscreenMods is meant to be a compatible with sketches written for Adafruit_STMPE610, offering the same functions, parameters and numerical ranges as Adafruit's library.
 
 ## Using The Interrupt Pin : Built in support when connected nothing else is needed. When specified as above
 no SPI calls are made unless a Touch was detected.  On normal connections - this means the Teensy LED

@@ -20,8 +20,8 @@
  * THE SOFTWARE.
  */
 
-#ifndef _XPT2046_Touchscreen_h_
-#define _XPT2046_Touchscreen_h_
+#ifndef _XPT2046_TouchscreenMods_h_
+#define _XPT2046_TouchscreenMods_h_
 
 #include "Arduino.h"
 #include <SPI.h>
@@ -45,9 +45,9 @@ public:
 	int16_t x, y, z;
 };
 
-class XPT2046_Touchscreen {
+class XPT2046_TouchscreenMods {
 public:
-	constexpr XPT2046_Touchscreen(uint8_t cspin, uint8_t tirq=255)
+	constexpr XPT2046_TouchscreenMods(uint8_t cspin, uint8_t tirq=255)
 		: csPin(cspin), tirqPin(tirq) { }
 	bool begin(SPIClass &wspi = SPI);
 #if defined(_FLEXIO_SPI_H_)
